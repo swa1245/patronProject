@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
@@ -42,36 +43,19 @@
             <div class="container">
                 <div class="category-filters" data-aos="fade-up">
                     <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="industrial-shed">Industrial Sheds</button>
+                    <button class="filter-btn" data-filter="pre-engineered">Pre Engineered Building</button>
+                    <button class="filter-btn" data-filter="prefab">Prefabricated Sheds</button>
+                    <button class="filter-btn" data-filter="fabrication">Fabrication Services</button>
                     <button class="filter-btn" data-filter="roofing">Roofing Solutions</button>
-                    <button class="filter-btn" data-filter="industrial">Industrial Sheds</button>
-                    <button class="filter-btn" data-filter="machinery">Machinery</button>
-                    <button class="filter-btn" data-filter="fabrication">Fabrication</button>
+                    <button class="filter-btn" data-filter="other">Other Products</button>
                 </div>
 
                 <div class="products-grid">
-                    <!-- Roofing Solutions -->
-                    <div class="product-card" data-category="roofing" data-aos="fade-up">
+                    <!-- Industrial Shed Fabrication -->
+                    <div class="product-card" data-category="industrial-shed" data-aos="fade-up">
                         <div class="product-image">
-                            <img src="images/products/Polycarbonate Profile Roofing ....webp" alt="Polycarbonate Profile Roofing">
-                            <div class="product-overlay">
-                                <button class="inquiry-btn">Inquire Now</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Polycarbonate Profile Roofing</h3>
-                            <p>High-quality polycarbonate roofing solutions for optimal light transmission and durability.</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> UV Protection</li>
-                                <li><i class="fas fa-check"></i> Weather Resistant</li>
-                                <li><i class="fas fa-check"></i> Easy Installation</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Industrial Sheds -->
-                    <div class="product-card" data-category="industrial" data-aos="fade-up">
-                        <div class="product-image">
-                            <img src="images/products/Industrial Shed Construction.webp" alt="Industrial Shed Construction">
+                            <img src="images/products/Industrial Shed Fabrication/Industrial Shed Construction.webp" alt="Industrial Shed Construction">
                             <div class="product-overlay">
                                 <button class="inquiry-btn">Inquire Now</button>
                             </div>
@@ -87,34 +71,359 @@
                         </div>
                     </div>
 
-                    <!-- Machinery -->
-                    <div class="product-card" data-category="machinery" data-aos="fade-up">
+                    <div class="product-card" data-category="industrial-shed" data-aos="fade-up">
                         <div class="product-image">
-                            <img src="images/products/Universal Head HMVVMC Machi....webp" alt="Universal Head HMVVMC Machine">
+                            <img src="images/products//Industrial Shed Fabrication/Pre Engineering Sheds.webp" alt="Industrial Shed Fabrication">
                             <div class="product-overlay">
                                 <button class="inquiry-btn">Inquire Now</button>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3>Universal Head HMVVMC Machine</h3>
-                            <p>High-precision machining solutions for complex industrial applications.</p>
+                            <h3>Industrial Shed Fabrication</h3>
+                            <p>Professional fabrication services for industrial sheds with precision engineering.</p>
                             <ul class="features">
-                                <li><i class="fas fa-check"></i> High Accuracy</li>
-                                <li><i class="fas fa-check"></i> Advanced Controls</li>
-                                <li><i class="fas fa-check"></i> Versatile Operation</li>
+                                <li><i class="fas fa-check"></i> Expert Fabrication</li>
+                                <li><i class="fas fa-check"></i> Quality Materials</li>
+                                <li><i class="fas fa-check"></i> Durable Construction</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- More products... -->
-                    <!-- Add more product cards following the same structure -->
+                    <!-- Pre Engineered Building -->
+                    <div class="product-card" data-category="pre-engineered" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/Pre Engineered Building/Pre Engineered Building.webp" alt="Pre Engineered Building">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pre Engineered Building</h3>
+                            <p>State-of-the-art pre-engineered buildings for rapid construction and optimal space utilization.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Fast Construction</li>
+                                <li><i class="fas fa-check"></i> Energy Efficient</li>
+                                <li><i class="fas fa-check"></i> Versatile Design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="pre-engineered" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/Pre Engineered Building/Prefab Industrial Shed.webp" alt="Prefab Industrial Shed">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Prefab Industrial Shed</h3>
+                            <p>State-of-the-art prefabricated industrial sheds for quick installation.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Quick Assembly</li>
+                                <li><i class="fas fa-check"></i> Modular Design</li>
+                                <li><i class="fas fa-check"></i> Cost-Effective</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Prefabricated Shed -->
+                    <div class="product-card" data-category="prefab" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/Prefabricated Shed/Prefabricated Roofing Shed.webp" alt="Prefabricated Roofing Shed">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Prefabricated Roofing Shed</h3>
+                            <p>Ready-to-install prefabricated sheds with quality roofing solutions.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Quick Assembly</li>
+                                <li><i class="fas fa-check"></i> Weather Resistant</li>
+                                <li><i class="fas fa-check"></i> Low Maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fabrication Services -->
+                    <div class="product-card" data-category="fabrication" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/fabrication service/Industrial Shed Fabrication Service.webp" alt="Fabrication Service">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Industrial Fabrication Service</h3>
+                            <p>Comprehensive fabrication services for industrial applications.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Custom Solutions</li>
+                                <li><i class="fas fa-check"></i> Professional Team</li>
+                                <li><i class="fas fa-check"></i> Quality Assurance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="fabrication" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/fabrication service/Pre Engineering Sheds.webp" alt="Pre Engineering Sheds">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pre Engineering Sheds</h3>
+                            <p>Custom pre-engineered sheds with professional fabrication.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Engineered Design</li>
+                                <li><i class="fas fa-check"></i> Quality Materials</li>
+                                <li><i class="fas fa-check"></i> Fast Installation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="fabrication" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/fabrication service/Terrace Roofing Shed.webp" alt="Terrace Roofing">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Terrace Roofing Solutions</h3>
+                            <p>Custom terrace roofing with expert fabrication services.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Custom Design</li>
+                                <li><i class="fas fa-check"></i> Weather Protection</li>
+                                <li><i class="fas fa-check"></i> Aesthetic Appeal</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Roofing Solutions -->
+                    <div class="product-card" data-category="roofing" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/roofing sheets/pre coated.webp" alt="Pre Coated Roofing">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pre Coated Roofing Sheets</h3>
+                            <p>High-quality pre-coated roofing solutions for lasting protection.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> UV Resistant</li>
+                                <li><i class="fas fa-check"></i> Corrosion Protection</li>
+                                <li><i class="fas fa-check"></i> Easy Installation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="roofing" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/roofing sheets/asbestos-cement-sheet-125x125.webp" alt="Cement Sheet">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Cement Roofing Sheets</h3>
+                            <p>Durable cement-based roofing solutions for industrial applications.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> High Durability</li>
+                                <li><i class="fas fa-check"></i> Weather Resistant</li>
+                                <li><i class="fas fa-check"></i> Cost-Effective</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="roofing" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/roofing sheets/frp-colour-coated-roofing-sheet-125x125.webp" alt="FRP Roofing">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>FRP Color Coated Sheets</h3>
+                            <p>Premium FRP roofing sheets with attractive color options.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Color Options</li>
+                                <li><i class="fas fa-check"></i> UV Protection</li>
+                                <li><i class="fas fa-check"></i> Long Lasting</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="roofing" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/roofing sheets/upvc-roofing-sheets-125x125.webp" alt="UPVC Sheets">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>UPVC Roofing Sheets</h3>
+                            <p>Modern UPVC roofing solutions for better insulation.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Thermal Insulation</li>
+                                <li><i class="fas fa-check"></i> Low Maintenance</li>
+                                <li><i class="fas fa-check"></i> Lightweight</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Other Products -->
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/CNC VMC Job Work.webp" alt="CNC VMC Job Work">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>CNC VMC Job Work</h3>
+                            <p>Precision machining services with advanced CNC and VMC technology.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> High Precision</li>
+                                <li><i class="fas fa-check"></i> Quick Turnaround</li>
+                                <li><i class="fas fa-check"></i> Complex Geometries</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/Car Parking Shed.webp" alt="Car Parking Shed">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Car Parking Shed</h3>
+                            <p>Durable and stylish parking solutions for vehicles.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> UV Protection</li>
+                                <li><i class="fas fa-check"></i> Weather Resistant</li>
+                                <li><i class="fas fa-check"></i> Custom Sizes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/FRP Portable Security Cabin.webp" alt="FRP Security Cabin">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>FRP Security Cabin</h3>
+                            <p>Portable security solutions with FRP construction.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Portable Design</li>
+                                <li><i class="fas fa-check"></i> Weather Resistant</li>
+                                <li><i class="fas fa-check"></i> Durable Build</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/Fabrication Work.webp" alt="Fabrication Work">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Custom Fabrication Work</h3>
+                            <p>Specialized fabrication services for unique requirements.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Custom Solutions</li>
+                                <li><i class="fas fa-check"></i> Expert Craftsmanship</li>
+                                <li><i class="fas fa-check"></i> Quality Finish</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/metal Laser Cutting Machine.webp" alt="Laser Cutting">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Metal Laser Cutting</h3>
+                            <p>Precision laser cutting services for metal work.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> High Precision</li>
+                                <li><i class="fas fa-check"></i> Fast Processing</li>
+                                <li><i class="fas fa-check"></i> Complex Designs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/Single Pole MCB.webp" alt="Single Pole MCB">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Single Pole MCB</h3>
+                            <p>Reliable electrical protection solutions.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Safety Certified</li>
+                                <li><i class="fas fa-check"></i> Easy Installation</li>
+                                <li><i class="fas fa-check"></i> Reliable Protection</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/Ss Roof Top Air Ventilator.webp" alt="Roof Ventilator">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>SS Roof Ventilator</h3>
+                            <p>Efficient air ventilation solutions for buildings.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Energy Efficient</li>
+                                <li><i class="fas fa-check"></i> Natural Ventilation</li>
+                                <li><i class="fas fa-check"></i> Low Maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="other" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="images/products/other/VMC Machine Job Work.webp" alt="VMC Machine Work">
+                            <div class="product-overlay">
+                                <button class="inquiry-btn">Inquire Now</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>VMC Machine Services</h3>
+                            <p>Professional VMC machining for precision parts.</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> High Accuracy</li>
+                                <li><i class="fas fa-check"></i> Complex Parts</li>
+                                <li><i class="fas fa-check"></i> Quick Turnaround</li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
 
         <!-- Product Inquiry Form -->
-        <section class="inquiry-section">
+        <!-- <section class="inquiry-section">
             <div class="container">
                 <div class="inquiry-content" data-aos="fade-up">
                     <h2>Need More Information?</h2>
@@ -136,47 +445,94 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Contact Us</h3>
-                        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-                        <p><i class="fas fa-envelope"></i> info@engineeringsolutions.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Industrial Avenue, Business District</p>
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <img src="./images/logo.png" alt="Patron Engineering">
+                        </div>
+                        <p>Leading provider of innovative engineering solutions for industrial and commercial projects. Excellence in design, fabrication, and installation.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="footer-section">
-                        <h3>Quick Links</h3>
+
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#work">Our Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="footer-section">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
+
+                    <div class="footer-services">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="#">Industrial Sheds</a></li>
+                            <li><a href="#">Structural Engineering</a></li>
+                            <li><a href="#">Metal Fabrication</a></li>
+                            <li><a href="#">Roofing Solutions</a></li>
+                            <li><a href="#">Turn-key Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Srv.No.26/1/A, Khadi machine Chowk,<br>Kondhawa BudruK, Pune 411 048,<br>Maharashtra.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sales@patronengineering.com">sales@patronengineering.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:purchase@patronegineering.com">purchase@patronegineering.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:patronengineering.pune@gmail.com">patronengineering.pune@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <a href="https://www.indiamart.com/patronengineering" target="_blank">www.indiamart.com/patronengineering</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025 Engineering Solutions. All rights reserved.</p>
+                <p>&copy; 2025 Patron Engineering. All Rights Reserved. Developed by Dw Innovation Pvt Ltd</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
     <script>

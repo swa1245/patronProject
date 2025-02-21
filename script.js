@@ -30,11 +30,50 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            
+            // Toggle menu icon
+            const menuIcon = mobileMenu.querySelector('i');
+            if (menuIcon) {
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenu.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                const menuIcon = mobileMenu.querySelector('i');
+                if (menuIcon) {
+                    menuIcon.classList.add('fa-bars');
+                    menuIcon.classList.remove('fa-times');
+                }
+            }
+        });
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                const menuIcon = mobileMenu.querySelector('i');
+                if (menuIcon) {
+                    menuIcon.classList.add('fa-bars');
+                    menuIcon.classList.remove('fa-times');
+                }
+            });
+        });
+    }
 });
 
 // Smooth Scroll for Navigation Links
@@ -156,33 +195,64 @@ document.querySelectorAll('.work-image').forEach(container => {
 });
 
 // Product Filtering
-document.addEventListener('DOMContentLoaded', function() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
 
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
             // Remove active class from all buttons
-            filterBtns.forEach(btn => btn.classList.remove('active'));
+            filterButtons.forEach(btn => btn.classList.remove('active'));
             // Add active class to clicked button
-            btn.classList.add('active');
+            button.classList.add('active');
 
-            const filterValue = btn.getAttribute('data-filter');
+            const filterValue = button.getAttribute('data-filter');
 
             productCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'block';
-                    // Reset animation
-                    card.style.animation = 'none';
-                    card.offsetHeight; // Trigger reflow
-                    card.style.animation = null;
-                    // Add fade in animation
-                    card.style.animation = 'fadeIn 0.5s ease forwards';
+                // Get the category of the card
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (filterValue === 'all') {
+                    card.style.display = '';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 10);
+                } else if (cardCategory === filterValue) {
+                    card.style.display = '';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 10);
                 } else {
-                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
                 }
             });
         });
+    });
+
+    // Trigger 'all' filter on page load
+    const allFilter = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allFilter) {
+        allFilter.click();
+    }
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
