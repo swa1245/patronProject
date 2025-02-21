@@ -1611,7 +1611,7 @@ main {
 
 /* Products Page Styles */
 .products-hero {
-    height: 40vh;
+    height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/banner/arc-welding-steel-construction-site.jpg');
     background-size: cover;
     background-position: center;

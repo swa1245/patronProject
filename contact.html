@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Header/Navbar -->
     <header>
         <nav>
@@ -18,8 +19,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a href="products.html">Products & Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
@@ -36,28 +36,13 @@
             <div class="container">
                 <h1>Let's Build Something <span class="highlight">Extraordinary</span> Together</h1>
                 <p class="banner-subtitle">From concept to completion, we're here to transform your engineering vision into reality</p>
-                <div class="banner-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-clock"></i>
-                        <span>24/7 Support</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>ISO Certified</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-handshake"></i>
-                        <span>Expert Consultation</span>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Contact Content -->
+        <!-- Contact Form -->
         <section class="contact-content">
             <div class="container">
                 <div class="contact-grid">
-                    <!-- Contact Form -->
                     <div class="contact-form-container">
                         <h2>Send us a Message</h2>
                         <form class="contact-form" id="contactForm">
@@ -94,19 +79,17 @@
                     <div class="contact-info-container">
                         <div class="contact-info-card">
                             <h3>Office Address</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Srv.No.26/1/A, Khadi machine Chowk,<br>Kondhawa BudruK, Pune 411 048,<br>Maharashtra.</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Srv.No.26/1/A, Khadi Machine Chowk, Pune, Maharashtra.</p>
                         </div>
 
                         <div class="contact-info-card">
                             <h3>Email Us</h3>
                             <p><i class="fas fa-envelope"></i> <a href="mailto:sales@patronengineering.com">sales@patronengineering.com</a></p>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:purchase@patronegineering.com">purchase@patronegineering.com</a></p>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:patronengineering.pune@gmail.com">patronengineering.pune@gmail.com</a></p>
                         </div>
 
                         <div class="contact-info-card">
                             <h3>Find Us Online</h3>
-                            <p><i class="fas fa-globe"></i> <a href="https://www.indiamart.com/patronengineering" target="_blank">www.indiamart.com/patronengineering</a></p>
+                            <p><i class="fas fa-globe"></i> <a href="https://www.indiamart.com/patronengineering" target="_blank">Indiamart Profile</a></p>
                         </div>
                     </div>
                 </div>
@@ -150,11 +133,11 @@
                     <div class="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#work">Our Work</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -209,6 +192,46 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Script loaded successfully.");
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Get form values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            // Validate input fields
+            if (!name || !email || !phone || !subject || !message) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // WhatsApp Number
+            let whatsappNumber = "919307081736";
+
+            // Format the message
+            let whatsappMessage = `Hello, I am *${name}*.\n\n📧 Email: ${email}\n📞 Phone: ${phone}\n📌 Subject: ${subject}\n📝 Message: ${message}\n\nPlease get in touch with me.`;
+
+            // Encode message properly
+            let encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Create WhatsApp URL
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Debugging log
+            console.log("WhatsApp URL:", whatsappURL);
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, "_blank");
+        });
+    });
+    </script>
+
 </body>
 </html>

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
+
 <body>
+    
     <header>
         <nav>
             <div class="logo">
@@ -17,8 +19,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="products.html">Products</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
+                <li><a href="products.html">Products&Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -250,6 +252,35 @@
             </div>
         </section>
     </main>
+     <!-- Floating WhatsApp Button -->
+     <a href="https://wa.me/yourmobilenumber" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 30px;
+            text-decoration: none;
+            /* transition: background 0.3s; */
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1ebe5d;
+        }
+    </style>
 
     <footer class="footer">
         <div class="footer-top">
