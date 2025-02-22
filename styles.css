@@ -145,6 +145,7 @@ nav {
     height: 100%;
 }
 
+
 .swiper-slide {
     position: relative;
     background-size: cover;
@@ -1296,7 +1297,7 @@ main {
     position: relative;
     padding-top: 80px;
     height: 85vh;
-    background: url('./images/contact/carpenter-talking-mobile-phone.jpg') center/cover no-repeat;
+    background: url('./images/contact/carpenter-talking-mobile-phone.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     text-align: center;
