@@ -111,7 +111,7 @@ nav {
         background: rgba(255, 255, 255, 0.98);
         flex-direction: column;
         align-items: center;
-        padding: 2rem 0;
+        /* padding: 2rem 0; */
         gap: 1.5rem;
         transition: left 0.3s ease;
         backdrop-filter: blur(10px);
@@ -659,7 +659,7 @@ nav {
     }
 
     .slide-content {
-        left: 5%;
+        /* left: 5%; */
         max-width: 90%;
     }
 
@@ -672,7 +672,7 @@ nav {
     }
 
     .mission-quote p {
-        font-size: 1.1rem;
+        font-size: 0.5rem;
     }
 
     .section {
@@ -680,7 +680,7 @@ nav {
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -1254,7 +1254,7 @@ main {
 
 @media (max-width: 768px) {
     .about-banner {
-        height: 300px;
+        height: 80vh;
     }
     .about-banner h1 {
         font-size: 2.5rem;
@@ -1580,7 +1580,7 @@ main {
 
 @media (max-width: 768px) {
     .contact-banner {
-        height: 300px;
+        height: 80vh;
     }
     
     .contact-banner h1 {
@@ -1833,13 +1833,14 @@ main {
         width: 100%;
         background: var(--white);
         flex-direction: column;
-        padding: 1rem 0;
+        /* padding: 1rem 0; */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
 
     .nav-links.active {
         display: flex;
+        left: 0;
     }
 
     .nav-links li {
